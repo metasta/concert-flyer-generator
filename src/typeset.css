@@ -1,0 +1,154 @@
+@page {
+ size: A3;
+ margin: 0;
+}
+@media print {
+ body {
+  filter: blur(0);
+ }
+ .guide {
+  visibility: hidden;
+ }
+ .instruction {
+  display: none;
+ }
+}
+@media screen {
+ body {
+  background: #eee;
+ }
+ #a3paper {
+  background:white;
+  box-shadow: 0 0 5mm rgba(0,0,0,.3);
+  margin: 5mm auto;
+  user-select: none;
+ }
+}
+* {
+ box-sizing: border-box;
+}
+body {
+ margin: 0;
+}
+#a3paper {
+ width: 297mm; height: 420mm; /* A3 (297x420mm) */
+ position: relative;
+}
+@media print {
+ #a3paper {
+  border: 0; padding: 0;
+  width: 255mm; height: 342mm; /* A4(210x297mm) + 45mm */
+/*  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%); */
+  left:0;top:0;bottom:0;right:0;margin:auto;
+ }
+}
+article#a4area {
+ width: 216mm; height: 303mm; /* A4 (210x297mm) + 6mm */
+ position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+}
+table.tombo,
+table.tombo tr,
+table.tombo td {
+ border-width:1px;
+ border-style:solid;
+ border-color: rgba(0,0,0,0);
+}
+table.tombo {
+ border-collapse: collapse;
+ width: 250mm; height: 337mm; /* A4 (210x297mm) + 40mm */
+ position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+}
+table.tombo td:nth-child(1),
+table.tombo td:nth-child(10){
+ width: 14mm;
+}
+table.tombo td:nth-child(2),
+table.tombo td:nth-child(3),
+table.tombo td:nth-child(8),
+table.tombo td:nth-child(9){
+ width: 3mm;
+}
+table.tombo td:nth-child(5),
+table.tombo td:nth-child(6){
+ width: 20mm;
+}
+table.tombo tr:nth-child(1),
+table.tombo tr:nth-child(10){
+ height: 14mm;
+}
+table.tombo tr:nth-child(2),
+table.tombo tr:nth-child(3),
+table.tombo tr:nth-child(8),
+table.tombo tr:nth-child(9){
+ height: 3mm;
+}
+table.tombo tr:nth-child(5),
+table.tombo tr:nth-child(6){
+ height: 20mm;
+}
+table.tombo tr:nth-child(1) td:nth-child(2),
+table.tombo tr:nth-child(1) td:nth-child(3),
+table.tombo tr:nth-child(1) td:nth-child(5),
+table.tombo tr:nth-child(1) td:nth-child(7),
+table.tombo tr:nth-child(1) td:nth-child(8),
+table.tombo tr:nth-child(2) td:nth-child(2),
+table.tombo tr:nth-child(2) td:nth-child(3),
+table.tombo tr:nth-child(2) td:nth-child(5),
+table.tombo tr:nth-child(2) td:nth-child(7),
+table.tombo tr:nth-child(2) td:nth-child(8),
+table.tombo tr:nth-child(3) td:nth-child(2),
+table.tombo tr:nth-child(3) td:nth-child(8),
+table.tombo tr:nth-child(5) td:nth-child(1),
+table.tombo tr:nth-child(5) td:nth-child(9),
+table.tombo tr:nth-child(6) td:nth-child(1),
+table.tombo tr:nth-child(6) td:nth-child(9),
+table.tombo tr:nth-child(8) td:nth-child(2),
+table.tombo tr:nth-child(8) td:nth-child(8),
+table.tombo tr:nth-child(9) td:nth-child(2),
+table.tombo tr:nth-child(9) td:nth-child(3),
+table.tombo tr:nth-child(9) td:nth-child(5),
+table.tombo tr:nth-child(9) td:nth-child(7),
+table.tombo tr:nth-child(9) td:nth-child(8),
+table.tombo tr:nth-child(10) td:nth-child(2),
+table.tombo tr:nth-child(10) td:nth-child(3),
+table.tombo tr:nth-child(10) td:nth-child(5),
+table.tombo tr:nth-child(10) td:nth-child(7),
+table.tombo tr:nth-child(10) td:nth-child(8) {
+ border-right-color: #333;
+}
+table.tombo tr:nth-child(1) td:nth-child(5),
+table.tombo tr:nth-child(1) td:nth-child(6),
+table.tombo tr:nth-child(2) td:nth-child(1),
+table.tombo tr:nth-child(2) td:nth-child(2),
+table.tombo tr:nth-child(2) td:nth-child(3),
+table.tombo tr:nth-child(2) td:nth-child(8),
+table.tombo tr:nth-child(2) td:nth-child(9),
+table.tombo tr:nth-child(2) td:nth-child(10),
+table.tombo tr:nth-child(3) td:nth-child(1),
+table.tombo tr:nth-child(3) td:nth-child(2),
+table.tombo tr:nth-child(3) td:nth-child(9),
+table.tombo tr:nth-child(3) td:nth-child(10),
+table.tombo tr:nth-child(5) td:nth-child(1),
+table.tombo tr:nth-child(5) td:nth-child(2),
+table.tombo tr:nth-child(5) td:nth-child(9),
+table.tombo tr:nth-child(5) td:nth-child(10),
+table.tombo tr:nth-child(7) td:nth-child(1),
+table.tombo tr:nth-child(7) td:nth-child(2),
+table.tombo tr:nth-child(7) td:nth-child(9),
+table.tombo tr:nth-child(7) td:nth-child(10),
+table.tombo tr:nth-child(8) td:nth-child(1),
+table.tombo tr:nth-child(8) td:nth-child(2),
+table.tombo tr:nth-child(8) td:nth-child(3),
+table.tombo tr:nth-child(8) td:nth-child(8),
+table.tombo tr:nth-child(8) td:nth-child(9),
+table.tombo tr:nth-child(8) td:nth-child(10),
+table.tombo tr:nth-child(9) td:nth-child(5),
+table.tombo tr:nth-child(9) td:nth-child(6) {
+ border-bottom-color: #333;
+}
+.guide {
+ width: 210mm; height: 297mm; /* A4 */
+ border: 1px solid rgba(127,255,255,.9);
+ position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+ z-index: 1000;
+}

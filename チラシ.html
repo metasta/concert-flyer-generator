@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>チラシ</title>
+<link rel="stylesheet" href="src/typeset.css">
+<link rel="stylesheet" href="src/editor.css">
+<link rel="stylesheet" href="テーマ/テーマ.css">
+<link rel="stylesheet" href="レイアウト.css">
+<!-- 編集画面 --><div class="instruction"><input type="checkbox" id="save_toggle"><label for="save_toggle" id="save_button" title="保存"></label><div id="save_url_dialog">このURLを保存してください<input id="save_url" readonly></div><div id="printer_button" title="プリント"></div><input type="checkbox" id="editor_toggle"><label for="editor_toggle" id="editor_button" title="編集"></label><div class="editor"><form><h2>テーマ</h2><div id="themes"></div><p><a target="_blank" href="テーマ/テーマの作り方.txt">テーマを作る</a></p><h2>演奏会</h2><label for="title">タイトル</label><input type="text" id="title" value="広島大学霞管弦楽団"><label for="title2">タイトル2</label><input type="text" id="title2" value="Spring Concert 2020"><h2>曲目</h2><ul id="input_program"><li><h3>メイン</h3><label for="main_composer">作曲者</label><input type="text" id="main_composer" value="ブラームス"><label for="main_composer_en">作曲者（欧字表記）</label><input type="text" id="main_composer_en" value="Johannes Brahms"><label for="main">曲名</label><input type="text" id="main" value="交響曲第4番"><label for="main_en">曲名（欧字表記）</label><input type="text" id="main_en" value="Symphony No.4 in E minor"><li><h3>サブ1</h3><label for="sub1_composer">作曲者</label><input type="text" id="sub1_composer" value="チャイコフスキー"><label for="sub1_composer_en">作曲者（欧字表記）</label><input type="text" id="sub1_composer_en" value="Pyotr Tchaikovsky"><label for="sub1">曲名</label><input type="text" id="sub1" value="<small>バレエ組曲</small>《くるみ割り人形》<small>より</small>"><label for="sub1_en">曲名（欧字表記）</label><input type="text" id="sub1_en" value="The Nutcracker"><li><h3>サブ2</h3><label for="sub2_composer">作曲者</label><input type="text" id="sub2_composer" value="ドヴォルザーク"><label for="sub2_composer_en">作曲者（欧字表記）</label><input type="text" id="sub2_composer_en" value="Antonín Dvořák"><label for="sub2">曲名</label><input type="text" id="sub2" value="<small>序曲</small>《謝肉祭》"><label for="sub2_en">曲名（欧字表記）</label><input type="text" id="sub2_en" value="Carnival, Op.92"></li></ul><button type="button" id="increment_button">1曲追加</button><button type="button" id="decrement_button">1曲削除</button><h2>指揮者</h2><label for="conductor_photo">写真</label><input type="text" id="conductor_photo" value="齊城英樹.jpg"><label for="conductor">氏名</label><input type="text" id="conductor" value="齊城英樹"><h2>日時と会場</h2><label for="fulldate">日付</label><input type="date" id="fulldate" value="2020-04-11"><div class="flex"><div><label for="time_open">開場時刻</label><input type="time" id="time_open" value="14:00"></div><div><label for="time_start">開演時刻</label><input type="time" id="time_start" value="14:30"></div></div><label for="place">会場</label><input type="text" id="place" value="南区民文化センター ホール"><h2>情報</h2><label for="organizer">主催</label><input type="text" id="organizer" value="広島大学霞管弦楽団"><label for="support">後援</label><textarea id="support">
+一般社団法人広島市医師会・一般社団法人広島県医師会・一般社団法人広島市薬剤師会
+公益社団法人広島県薬剤師会・一般社団法人広島市歯科医師会・一般社団法人広島県歯科医師会
+広島市教育委員会・中国新聞社・ヤマハミュージック　広島店
+</textarea><div class="flex"><div><label for="tel">電話番号</label><input type="tel" id="tel" value="012-3456-7890"></div><div><label for="representative">代表</label><input type="text" id="representative" value="○○"></div></div><label for="email">メールアドレス</label><input type="email" id="email" value="kasumi.orchestra@gmail.com"></form></div></div><section id="a3paper">
+
+<!--
+
+ ここから flyer 本体
+
+-->
+
+<article id="a4area" class="forest">
+<h1><span id="p__title">広島大学霞管弦楽団</span><i><span id="p__title2">Spring Concert 2020</span></i></h1>
+
+<ul id="program">
+ <li class="main_program">
+  <span id="p__main_composer">ブラームス</span>： <cite><span id="p__main">交響曲第4番</span></cite>
+  <i><span id="p__main_composer_en">Johannes Brahms</span>: <cite><span id="p__main_en">Symphony No.4 in E minor</span></cite></i>
+ <li>
+  <span id="p__sub1_composer">チャイコフスキー</span> <br>
+  <cite><span id="p__sub1"><small>バレエ組曲</small>《くるみ割り人形》<small>より</small></span></cite>
+  <i><span id="p__sub1_composer_en">Pyotr Tchaikovsky</span>:
+  <cite><span id="p__sub1_en">The Nutcracker</span></cite></i>
+ <li>
+  <span id="p__sub2_composer">ドヴォルザーク</span> <br>
+  <cite><span id="p__sub2"><small>序曲</small>《謝肉祭》</span></cite>
+  <i><span id="p__sub2_composer_en">Antonín Dvořák</span>:
+  <cite><span id="p__sub2_en">Carnival, Op.92</span></cite></i>
+</ul>
+
+<figure class="portrait">
+ <div id="p__conductor_photo" class="img" style="background-image:url(齊城英樹.jpg)"></div>
+ <figcaption><small>指揮</small> <span id="p__conductor">齊城英樹</span></figcaption>
+</figure>
+
+<footer>
+ <span class="time"><span id="p__year">2020</span>.<b><b><span id="p__month">4</span>.<span id="p__day">11</span>.</b></b>
+  <span id="p__youbi">SAT</span>.
+  <b><span id="p__time_start">14:30</span>-</b>［<span id="p__time_open">14:00</span> 開場］</span>
+ <p class="place"><span id="p__place">南区民文化センター ホール</span>
+  <span class="fee">入場無料</span>
+ </p>
+ <dl>
+  <dt>主催
+  <dd><span id="p__organizer">広島大学霞管弦楽団</span>
+  <dt>後援
+  <dd id="p__support">一般社団法人広島市医師会・一般社団法人広島県医師会・一般社団法人広島市薬剤師会
+   <br>公益社団法人広島県薬剤師会・一般社団法人広島市歯科医師会・一般社団法人広島県歯科医師会
+   <br>広島市教育委員会・中国新聞社・ヤマハミュージック　広島店
+  <dt>お問い合わせ
+  <dd>Tel: <span id="p__tel">012-3456-7890</span>（代表：<span id="p__representative">○○</span>）
+   Mail: <span id="p__email">kasumi.orchestra@gmail.com</span>
+ </dl>
+ <figure class="QRcode website">
+  <figcaption>WEBSITE</figcaption>
+  <div class="svg"></div>
+ </figure>
+ <figure class="QRcode twitter">
+  <figcaption>TWITTER</figcaption>
+  <div class="svg"></div>
+ </figure>
+</footer>
+
+</article>
+
+<!--
+
+ ここまで flyer 本体
+
+-->
+
+
+<table class="tombo"><tr><td><td><td><td><td><td><td><td><td><td><tr><td><td><td><td><td><td><td><td><td><td><tr><td><td><td><td><td><td><td><td><td><td><tr><td><td><td><td><td><td><td><td><td><td><tr><td><td><td><td><td><td><td><td><td><td><tr><td><td><td><td><td><td><td><td><td><td><tr><td><td><td><td><td><td><td><td><td><td><tr><td><td><td><td><td><td><td><td><td><td><tr><td><td><td><td><td><td><td><td><td><td><tr><td><td><td><td><td><td><td><td><td><td></table><div class="guide"></div></section>
+<script src="テーマ/テーマ.css"></script>
+<script src="src/script.js"></script>

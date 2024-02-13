@@ -1,0 +1,72 @@
+const THEMECSS=`.hack {} /* do not erase this (and the last line) for js */
+
+@charset "utf-8";
+/*
+ テーマ定義
+
+ 背景画像1つとテーマカラー2色を指定すれば、新しいテーマを作れる。
+ テーマカラー1はタイトルの背景色、
+ テーマカラー2は日時や場所情報の文字色になる。
+ */
+
+.forest {
+ --image: url("テーマ/forest.jpg");
+ --color1: #204720;
+ --color2: #112B12;
+}
+
+.ocean {
+ --image: url("テーマ/ocean.jpg");
+ --color1: #043c78;
+ --color2: #005;
+}
+
+.sunset {
+ --image: url("テーマ/sunset.jpg");
+ --color1: #3d0f17;
+ --color2: #600;
+}
+
+.grass {
+ --image: url("テーマ/grass.jpg");
+ --color1: #583d16;
+ --color2: #a68117;
+}
+
+.lake {
+ --image: url("テーマ/lake.jpg");
+ --color1: #74563b;
+ --color2: #a67333;
+}
+
+.lake2 {
+ --image: url("テーマ/lake2.jpg");
+ --color1: #a982f0;
+ --color2: #663a8d;
+}
+
+.mountains {
+ --image: url("テーマ/mountains.jpg");
+ --color1: #26285b;
+ --color2: #82638d;
+}
+
+.snowpath {
+ --image: url("テーマ/snowpath.jpg");
+ --color1: #d7d7d8;
+ --color2: #185175;
+}
+
+.nightbay {
+ --image: url("テーマ/nightbay.jpg");
+ --color1: #02030c;
+ --color2: #423d3a;
+}
+
+.galaxy {
+ --image: url("テーマ/galaxy.jpg");
+ --color1: #141b26;
+ --color2: #141b26;
+}
+
+`
